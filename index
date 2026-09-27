@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>n0n_etre</title>
+
+  <!-- Google Fonts: Michroma (titles), Archivo (menu, semibold), Archivo Black (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@600&family=Michroma&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="page-wrap">
+
+    <header>
+      <div class="logo">n0n_etre</div>
+      <nav>
+        <ul>
+          <li><a href="photos.html">photos</a></li>
+          <li><a href="videos.html">vidéos</a></li>
+          <li><a href="livres.html">livres</a></li>
+        </ul>
+      </nav>
+    </header>
+
+  </div>
+
+  <section class="hero">
+    <!-- Replace with your own hero image -->
+    <img src="images/hero.jpg" alt="Hero image">
+  </section>
+
+  <div class="page-wrap">
+
+    <section class="bio">
+      <p>
+        Short bio text goes here. A few sentences introducing who you are,
+        your background, and the themes your work explores.
+      </p>
+    </section>
+
+    <section class="projects">
+      <h2>Projets</h2>
+      <div class="project-grid">
+        <a href="#" class="project-item">
+          <img src="images/project1.jpg" alt="Project 1">
+        </a>
+        <a href="#" class="project-item">
+          <img src="images/project2.jpg" alt="Project 2">
+        </a>
+        <a href="#" class="project-item">
+          <img src="images/project3.jpg" alt="Project 3">
+        </a>
+      </div>
+    </section>
+
+  </div>
+
+  <footer>
+    <div class="footer-line"></div>
+    <div class="footer-content">
+      <p>your name 2026</p>
+      <p>City, Country</p>
+    </div>
+  </footer>
+
+</body>
+</html>
