@@ -1,0 +1,131 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Archivo Black', sans-serif;
+  color: #111;
+  line-height: 1.6;
+}
+
+/* Wrapper that applies the 20px padding to everything except
+   the hero image and the footer border line */
+.page-wrap {
+  padding: 0 20px;
+}
+
+/* ---- Header ---- */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.logo {
+  font-family: 'Michroma', sans-serif;
+  font-size: 1.8rem;
+  line-height: 1;
+}
+
+nav ul {
+  list-style: none;
+  text-align: right;
+}
+
+nav ul li {
+  margin-bottom: 4px;
+}
+
+nav a {
+  font-family: 'Archivo', sans-serif;
+  font-weight: 600;
+  text-decoration: none;
+  color: #111;
+  font-size: 0.95rem;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* ---- Hero image (full width, no padding) ---- */
+.hero img {
+  width: 100%;
+  max-height: 500px;
+  object-fit: cover;
+  display: block;
+}
+
+/* ---- Bio ---- */
+.bio {
+  max-width: 400px;
+  padding-top: 60px;
+}
+
+.bio p {
+  font-family: 'Archivo Black', sans-serif;
+  font-size: 0.95rem;
+}
+
+/* ---- Projects ---- */
+.projects {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.projects h2 {
+  font-family: 'Michroma', sans-serif;
+  font-size: 2.2rem;
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4px;
+}
+
+.project-item img {
+  width: 100%;
+  height: 340px;
+  object-fit: cover;
+  display: block;
+}
+
+/* ---- Footer ---- */
+footer {
+  margin-top: 20px;
+}
+
+.footer-line {
+  border-top: 1px solid #eee;
+  width: 100%;
+}
+
+.footer-content {
+  padding: 20px;
+  font-family: 'Archivo Black', sans-serif;
+  font-size: 0.8rem;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 700px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  nav ul {
+    text-align: left;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+}
