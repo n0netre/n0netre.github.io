@@ -168,6 +168,135 @@ nav a.active:hover {
   display: block;
 }
 
+/* ---- Commissions layout ---- */
+.commissions-layout {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  padding-top: 40px;
+  padding-bottom: 60px;
+}
+
+/* ---- Left column: name list ---- */
+.commissions-list {
+  flex: 0 0 38%;
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+.commission-item {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+  cursor: pointer;
+  font: inherit;
+  color: inherit;
+}
+
+.commission-item h3 {
+  font-family: 'Archivo Black', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 400;
+  margin-bottom: 6px;
+}
+
+.commission-item p {
+  font-family: 'Archivo', sans-serif;
+  font-weight: 400;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.commission-item p em {
+  font-style: italic;
+}
+
+.commission-item.is-active h3 {
+  text-decoration: underline;
+}
+
+/* ---- Right column: carousel ---- */
+.commissions-carousel {
+  flex: 0 0 60%;
+  position: sticky;
+  top: 20px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.25s ease;
+}
+
+.commissions-carousel.is-visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.carousel-viewport {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 160px); /* fits on screen without scrolling */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.carousel-viewport img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  font-size: 2.5rem;
+  line-height: 1;
+  color: #111;
+  cursor: pointer;
+  padding: 8px 12px;
+  z-index: 2;
+}
+
+.carousel-arrow.prev {
+  left: 0;
+}
+
+.carousel-arrow.next {
+  right: 0;
+}
+
+.carousel-arrow:hover {
+  opacity: 0.6;
+}
+
+@media (max-width: 900px) {
+  .commissions-layout {
+    flex-direction: column;
+  }
+
+  .commissions-list,
+  .commissions-carousel {
+    flex: 1 1 100%;
+  }
+
+  .commissions-carousel {
+    position: static;
+  }
+
+  .carousel-viewport {
+    height: 60vh;
+  }
+}
+
 /* ---- Footer ---- */
 footer {
   margin-top: 20px;
