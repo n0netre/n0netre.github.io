@@ -5,7 +5,7 @@ My personal portfolio website, built with HTML/CSS/JS and hosted on GitHub Pages
 🔗 **Live site:** https://n0netre.github.io
 
 ## Pages
-├── index.html          → n0netre.com/
+├── index.html          → n0netre.com/index.html
 
 ├── photos.html         → n0netre.com/photos.html
 
