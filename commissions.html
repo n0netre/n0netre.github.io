@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>n0n_etre — commissions</title>
+
+  <!-- Google Fonts: Michroma (titles), Archivo (menu semibold + body regular), Archivo Black (names) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@400;600&family=Michroma&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="page-wrap">
+
+    <header>
+      <div class="logo">n0n_etre</div>
+      <nav>
+        <ul>
+          <li><a href="photos.html" class="active">photos</a></li>
+          <li><a href="videos.html">vidéos</a></li>
+          <li><a href="livres.html">livres</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="section-header">
+      <h1>Commissions</h1>
+      <div class="section-line"></div>
+    </section>
+
+    <section class="commissions-layout">
+
+      <!-- ---- Left column: list of names ---- -->
+      <div class="commissions-list">
+
+        <button class="commission-item" data-gallery="dana-chow">
+          <h3>Dana Chow</h3>
+          <p>Fashion design NÜ GUI</p>
+        </button>
+
+        <button class="commission-item" data-gallery="xela-eius">
+          <h3>XELA EDNA &amp; EIUS ECHO</h3>
+          <p>Pochettes de singles et photos de presse pour la sortie
+            des titres <em>Ozone</em> et <em>Pas très perspicace</em>
+            du duo musical Xela Edna et Eius Echo.</p>
+        </button>
+
+        <button class="commission-item" data-gallery="phobocosm">
+          <h3>Phobocosm</h3>
+          <p>Photos de presse du groupe de metal <em>Phobocosm</em>.</p>
+        </button>
+
+        <button class="commission-item" data-gallery="juliette-langevin">
+          <h3>Juliette Langevin</h3>
+          <p>Photos promotionnelles pour le recueil de poèmes
+            <em>Fille méchante</em> de l'artiste et écrivaine Juliette Langevin.</p>
+        </button>
+
+        <button class="commission-item" data-gallery="orane-thibaud">
+          <h3>Orane Thibaud</h3>
+          <p>Photos promotionnelles pour le recueil de poèmes
+            <em>Toute raison de m'aimer est forcément bonne</em> de l'artiste
+            et écrivaine Orane Thibaud, alias Greta Ziegenhagen.</p>
+        </button>
+
+      </div>
+
+      <!-- ---- Right column: carousel ---- -->
+      <div class="commissions-carousel">
+        <div class="carousel-viewport">
+          <button class="carousel-arrow prev" aria-label="Previous image">&#8249;</button>
+          <img id="carousel-image" src="" alt="">
+          <button class="carousel-arrow next" aria-label="Next image">&#8250;</button>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <footer>
+    <div class="footer-line"></div>
+    <div class="footer-content">
+      <p>n0netre 2026</p>
+      <p>Montreal, Canada</p>
+    </div>
+  </footer>
+
+  <script>
+    // Map each name's data-gallery key to its list of images.
+    // Replace these paths with your own image files.
+    const galleries = {
+      "dana-chow": [
+        "images/commissions/dana-chow-1.jpg",
+        "images/commissions/dana-chow-2.jpg",
+        "images/commissions/dana-chow-3.jpg"
+      ],
+      "xela-eius": [
+        "images/commissions/xela-eius-1.jpg",
+        "images/commissions/xela-eius-2.jpg"
+      ],
+      "phobocosm": [
+        "images/commissions/phobocosm-1.jpg",
+        "images/commissions/phobocosm-2.jpg"
+      ],
+      "juliette-langevin": [
+        "images/commissions/juliette-langevin-1.jpg",
+        "images/commissions/juliette-langevin-2.jpg"
+      ],
+      "orane-thibaud": [
+        "images/commissions/orane-thibaud-1.jpg",
+        "images/commissions/orane-thibaud-2.jpg"
+      ]
+    };
+
+    const items = document.querySelectorAll(".commission-item");
+    const image = document.getElementById("carousel-image");
+    const carousel = document.querySelector(".commissions-carousel");
+    const prevBtn = document.querySelector(".carousel-arrow.prev");
+    const nextBtn = document.querySelector(".carousel-arrow.next");
+
+    let currentGallery = null;
+    let currentIndex = 0;
+
+    function showImage() {
+      if (!currentGallery) return;
+      const list = galleries[currentGallery];
+      if (!list || list.length === 0) return;
+      image.src = list[currentIndex];
+      image.alt = currentGallery + " — image " + (currentIndex + 1);
+    }
+
+    function setActiveItem(button) {
+      items.forEach(el => el.classList.remove("is-active"));
+      button.classList.add("is-active");
+    }
+
+    items.forEach(button => {
+      button.addEventListener("click", () => {
+        currentGallery = button.dataset.gallery;
+        currentIndex = 0;
+        setActiveItem(button);
+        carousel.classList.add("is-visible");
+        showImage();
+      });
+    });
+
+    prevBtn.addEventListener("click", () => {
+      if (!currentGallery) return;
+      const list = galleries[currentGallery];
+      currentIndex = (currentIndex - 1 + list.length) % list.length;
+      showImage();
+    });
+
+    nextBtn.addEventListener("click", () => {
+      if (!currentGallery) return;
+      const list = galleries[currentGallery];
+      currentIndex = (currentIndex + 1) % list.length;
+      showImage();
+    });
+
+    // Carousel stays hidden until a name is clicked
+  </script>
+
+</body>
+</html>
