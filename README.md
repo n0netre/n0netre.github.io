@@ -6,14 +6,19 @@ My personal portfolio website, built with HTML/CSS/JS and hosted on GitHub Pages
 
 ## Pages
 ├── index.html          → n0netre.com/
+
 ├── photos.html         → n0netre.com/photos.html
+
 └── commissions/        → n0netre.com/commissions.html
     ├── commission1.html
     └── commission2.html
+    
 ├── livres/             → n0netre.com/livres.html
 │   └── livre1.html
 │   └── livre2.html
+
 ├── vidéos.html         → n0netre.com/vidéos.html
+
 ├── css/
 │   └── style.css
 
