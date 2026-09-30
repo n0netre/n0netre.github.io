@@ -297,6 +297,57 @@ nav a.active:hover {
   }
 }
 
+/* ---- Films page ---- */
+.film-info {
+  padding-top: 40px;
+  width: 45%;
+}
+
+.film-info h2 {
+  font-family: 'Archivo Black', sans-serif;
+  font-weight: 400;
+  font-size: 1.1rem;
+  margin-bottom: 4px;
+}
+
+.film-type {
+  font-family: 'Archivo', sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 0.95rem;
+  margin-bottom: 20px;
+}
+
+.film-description {
+  font-family: 'Archivo', sans-serif;
+  font-weight: 400;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Full-width video, no side padding, sitting right under the text block */
+.film-video {
+  width: 100%;
+  padding-top: 40px;
+  padding-bottom: 20px;
+}
+
+.film-video-frame {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 aspect ratio */
+}
+
+.film-video-frame iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  border: none;
+}
+
 /* ---- Footer ---- */
 footer {
   margin-top: 20px;
@@ -331,5 +382,9 @@ footer {
 
   .gallery img {
     height: 260px;
+  }
+
+  .film-info {
+    width: 100%;
   }
 }
