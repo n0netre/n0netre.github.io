@@ -4,10 +4,17 @@
   box-sizing: border-box;
 }
 
+html {
+  height: 100%;
+}
+
 body {
   font-family: 'Archivo Black', sans-serif;
   color: #111;
   line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 /* ---- Global link hover effect ---- */
@@ -123,7 +130,7 @@ nav a.active:hover {
   font-family: 'Michroma', sans-serif;
   font-weight: 400;
   font-size: 1.4rem;   /* smaller than the logo */
-  margin: 0 0 24px 0;  /* remove the browser's default large h1 margin */
+  margin: 0 0 12px 0;  /* smaller gap to the line underneath */
   line-height: 1;
 }
 
@@ -304,25 +311,27 @@ nav a.active:hover {
 }
 
 .film-info h2 {
-  font-family: 'Archivo Black', sans-serif;
+  font-family: 'Archivo Black', Arial, sans-serif;
   font-weight: 400;
   font-size: 1.1rem;
-  margin-bottom: 4px;
+  margin: 0 0 4px 0;
 }
 
-.film-type {
-  font-family: 'Archivo', sans-serif;
+.film-info .film-type {
+  font-family: 'Archivo', Arial, sans-serif;
   font-weight: 400;
   font-style: italic;
   font-size: 0.95rem;
-  margin-bottom: 20px;
+  margin: 0 0 20px 0;
 }
 
-.film-description {
-  font-family: 'Archivo', sans-serif;
+.film-info .film-description {
+  font-family: 'Archivo', Arial, sans-serif;
   font-weight: 400;
+  font-style: normal;
   font-size: 0.95rem;
   line-height: 1.6;
+  margin: 0;
 }
 
 /* Full-width video, no side padding, sitting right under the text block */
@@ -332,25 +341,27 @@ nav a.active:hover {
   padding-bottom: 20px;
 }
 
-.film-video-frame {
+.film-video .film-video-frame {
   position: relative;
   width: 100%;
+  height: 0;
   padding-top: 56.25%; /* 16:9 aspect ratio */
+  overflow: hidden;
 }
 
-.film-video-frame iframe {
+.film-video .film-video-frame iframe {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 100% !important;
+  height: 100% !important;
   display: block;
   border: none;
 }
 
 /* ---- Footer ---- */
 footer {
-  margin-top: 20px;
+  margin-top: auto;
 }
 
 .footer-line {
