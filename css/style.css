@@ -307,6 +307,7 @@ nav a.active:hover {
 /* ---- Films page ---- */
 .film-info {
   padding-top: 40px;
+  padding-bottom: 80px;
   width: 45%;
 }
 
