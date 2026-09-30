@@ -309,6 +309,7 @@ nav a.active:hover {
   padding-top: 40px;
   padding-bottom: 20px;
   width: 45%;
+  margin: 0 auto;
 }
 
 .film-info h2 {
@@ -338,7 +339,7 @@ nav a.active:hover {
 /* Full-width video, no side padding, sitting right under the text block */
 .film-video {
   width: 100%;
-  padding-top: 40px;
+  padding-top: 20px;
   padding-bottom: 80px;
 }
 
