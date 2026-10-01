@@ -210,7 +210,6 @@ nav a.active:hover {
   width: auto;
   max-width: 100%;
   object-fit: cover;
-  flex-grow: 1;
   display: block;
 }
 
