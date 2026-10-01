@@ -50,6 +50,14 @@
 
   </div>
 
+  <!-- ---- Lightbox overlay ---- -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close">&times;</button>
+    <button class="lightbox-arrow lightbox-prev" id="lightboxPrev" aria-label="Previous image">&#8249;</button>
+    <img class="lightbox-image" id="lightboxImage" src="" alt="">
+    <button class="lightbox-arrow lightbox-next" id="lightboxNext" aria-label="Next image">&#8250;</button>
+  </div>
+
   <footer>
     <div class="footer-line"></div>
     <div class="footer-content">
@@ -57,6 +65,63 @@
       <p>Montreal, Canada</p>
     </div>
   </footer>
+  <script>
+    const galleryImages = Array.from(document.querySelectorAll(".gallery img"));
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImage = document.getElementById("lightboxImage");
+    const closeBtn = document.getElementById("lightboxClose");
+    const prevBtn = document.getElementById("lightboxPrev");
+    const nextBtn = document.getElementById("lightboxNext");
+
+    let currentIndex = 0;
+
+    function openLightbox(index) {
+      currentIndex = index;
+      lightboxImage.src = galleryImages[currentIndex].src;
+      lightboxImage.alt = galleryImages[currentIndex].alt;
+      lightbox.classList.add("is-open");
+      document.body.style.overflow = "hidden"; // prevent background scroll
+    }
+
+    function closeLightbox() {
+      lightbox.classList.remove("is-open");
+      document.body.style.overflow = "";
+    }
+
+    function showNext() {
+      currentIndex = (currentIndex + 1) % galleryImages.length;
+      lightboxImage.src = galleryImages[currentIndex].src;
+      lightboxImage.alt = galleryImages[currentIndex].alt;
+    }
+
+    function showPrev() {
+      currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
+      lightboxImage.src = galleryImages[currentIndex].src;
+      lightboxImage.alt = galleryImages[currentIndex].alt;
+    }
+
+    galleryImages.forEach((img, index) => {
+      img.addEventListener("click", () => openLightbox(index));
+      img.style.cursor = "pointer";
+    });
+
+    closeBtn.addEventListener("click", closeLightbox);
+    nextBtn.addEventListener("click", showNext);
+    prevBtn.addEventListener("click", showPrev);
+
+    // Click outside the image (on the dark background) also closes it
+    lightbox.addEventListener("click", (e) => {
+      if (e.target === lightbox) closeLightbox();
+    });
+
+    // Keyboard support: Escape to close, arrow keys to navigate
+    document.addEventListener("keydown", (e) => {
+      if (!lightbox.classList.contains("is-open")) return;
+      if (e.key === "Escape") closeLightbox();
+      if (e.key === "ArrowRight") showNext();
+      if (e.key === "ArrowLeft") showPrev();
+    });
+  </script>
 
 </body>
 </html>
