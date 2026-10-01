@@ -108,6 +108,7 @@ nav a.active:hover {
 .bio p {
   font-family: 'Archivo Black', sans-serif;
   font-size: 1.05rem;
+   line-height: 1.4;
 }
 
 /* ---- Projects ---- */
@@ -224,11 +225,11 @@ nav a.active:hover {
 }
 
 .landscape-row {
-  height: 450px;
+  height: 500px;
 }
 
 .portrait-row {
-  height: 560px;
+  height: 600px;
 }
 
 /* ---- Commissions layout ---- */
