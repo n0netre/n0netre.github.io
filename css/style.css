@@ -193,6 +193,10 @@ nav a.active:hover {
   text-decoration: none;
 }
 
+.section-link a:hover {
+  text-decoration: underline;
+}
+
 /* ---- Gallery ----
    Each image keeps its own natural width/height ratio.
    Row height is fixed; width is automatic based on that ratio,
