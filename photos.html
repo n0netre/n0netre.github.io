@@ -17,7 +17,7 @@
   <div class="page-wrap">
 
     <header>
-      <div class="logo">n0n_etre</div>
+      <div class="logo"><a href="index.html">n0n_etre</a></div>
       <nav>
         <ul>
           <li><a href="photos.html" class="active">photos</a></li>
@@ -38,16 +38,24 @@
     <section class="gallery">
       <!-- Replace src values with your own images.
            Each image keeps its natural aspect ratio; only the row height is fixed. -->
-      <img src="images/photo1.jpg" alt="">
-      <img src="images/photo2.jpg" alt="">
-      <img src="images/photo3.jpg" alt="">
-      <img src="images/photo4.jpg" alt="">
-      <img src="images/photo5.jpg" alt="">
-      <img src="images/photo6.jpg" alt="">
-      <img src="images/photo7.jpg" alt="">
-      <img src="images/photo8.jpg" alt="">
+      <img src="images/siren.jpg" alt="Siren">
+      <img src="images/siren5.jpg" alt="Siren">
+      <img src="images/rock.jpg" alt="">
+      <img src="images/silverbeing.jpg" alt="Silver Being">
+      <img src="images/sand.jpg" alt="Dunes">
+      <img src="images/ghost.jpg" alt="Ghost">
+      <img src="images/darkwave.jpg" alt="">
+      <img src="images/blur.jpg" alt="">
     </section>
 
+  </div>
+
+  <!-- ---- Lightbox overlay ---- -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close">&times;</button>
+    <button class="lightbox-arrow lightbox-prev" id="lightboxPrev" aria-label="Previous image">&#8249;</button>
+    <img class="lightbox-image" id="lightboxImage" src="" alt="">
+    <button class="lightbox-arrow lightbox-next" id="lightboxNext" aria-label="Next image">&#8250;</button>
   </div>
 
   <footer>
@@ -57,6 +65,63 @@
       <p>Montreal, Canada</p>
     </div>
   </footer>
+  <script>
+    const galleryImages = Array.from(document.querySelectorAll(".gallery img"));
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImage = document.getElementById("lightboxImage");
+    const closeBtn = document.getElementById("lightboxClose");
+    const prevBtn = document.getElementById("lightboxPrev");
+    const nextBtn = document.getElementById("lightboxNext");
+
+    let currentIndex = 0;
+
+    function openLightbox(index) {
+      currentIndex = index;
+      lightboxImage.src = galleryImages[currentIndex].src;
+      lightboxImage.alt = galleryImages[currentIndex].alt;
+      lightbox.classList.add("is-open");
+      document.body.style.overflow = "hidden"; // prevent background scroll
+    }
+
+    function closeLightbox() {
+      lightbox.classList.remove("is-open");
+      document.body.style.overflow = "";
+    }
+
+    function showNext() {
+      currentIndex = (currentIndex + 1) % galleryImages.length;
+      lightboxImage.src = galleryImages[currentIndex].src;
+      lightboxImage.alt = galleryImages[currentIndex].alt;
+    }
+
+    function showPrev() {
+      currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
+      lightboxImage.src = galleryImages[currentIndex].src;
+      lightboxImage.alt = galleryImages[currentIndex].alt;
+    }
+
+    galleryImages.forEach((img, index) => {
+      img.addEventListener("click", () => openLightbox(index));
+      img.style.cursor = "pointer";
+    });
+
+    closeBtn.addEventListener("click", closeLightbox);
+    nextBtn.addEventListener("click", showNext);
+    prevBtn.addEventListener("click", showPrev);
+
+    // Click outside the image (on the dark background) also closes it
+    lightbox.addEventListener("click", (e) => {
+      if (e.target === lightbox) closeLightbox();
+    });
+
+    // Keyboard support: Escape to close, arrow keys to navigate
+    document.addEventListener("keydown", (e) => {
+      if (!lightbox.classList.contains("is-open")) return;
+      if (e.key === "Escape") closeLightbox();
+      if (e.key === "ArrowRight") showNext();
+      if (e.key === "ArrowLeft") showPrev();
+    });
+  </script>
 
 </body>
 </html>
