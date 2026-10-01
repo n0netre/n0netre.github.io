@@ -101,12 +101,13 @@ nav a.active:hover {
 /* ---- Bio ---- */
 .bio {
   width: 45%;
-  padding-top: 60px;
+  padding-top: 80px;
+  paddin-bottom: 80px;
 }
 
 .bio p {
   font-family: 'Archivo Black', sans-serif;
-  font-size: 0.95rem;
+  font-size: 1.05rem;
 }
 
 /* ---- Projects ---- */
@@ -136,7 +137,7 @@ nav a.active:hover {
 
 .project-item img {
   width: 100%;
-  height: 340px;
+  height: 500px;
   object-fit: cover;
   display: block;
   transition: filter 0.3s ease;
@@ -153,7 +154,7 @@ nav a.active:hover {
   width: 90%;
   transform: translateY(-50%);
   font-family: 'Archivo Black', Arial, sans-serif;
-  font-size: 1.8rem;
+  font-size: 2rem;
   color: #fff;
   text-align: center;
   pointer-events: none;
