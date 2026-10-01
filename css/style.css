@@ -365,6 +365,8 @@ nav a.active:hover {
 .film-info {
   padding-top: 40px;
   width: 45%;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .film-info h2 {
