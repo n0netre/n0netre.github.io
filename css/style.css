@@ -203,18 +203,32 @@ nav a.active:hover {
    so images line up in a row without being cropped or stretched. */
 .gallery {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   gap: 4px;
   padding-top: 20px;
   padding-bottom: 60px;
 }
 
-.gallery img {
-  height: 420px;
+.gallery-row {
+  display: flex;
+  gap: 4px;
+  width: 100%;
+}
+
+.gallery-row img {
+  flex: 1 1 auto;
+  height: 100%;
   width: auto;
-  max-width: 100%;
   object-fit: cover;
   display: block;
+}
+
+.landscape-row {
+  height: 380px;
+}
+
+.portrait-row {
+  height: 560px;
 }
 
 /* ---- Commissions layout ---- */
@@ -581,9 +595,13 @@ footer {
     grid-template-columns: 1fr;
   }
 
-  .gallery img {
-    height: 260px;
-  }
+  .landscape-row {
+  height: 200px;
+}
+
+.portrait-row {
+  height: 320px;
+}
 
   .film-info {
     width: 100%;
