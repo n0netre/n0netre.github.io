@@ -93,9 +93,9 @@ nav a.active:hover {
 
 .hero img {
   width: 100%;
-  height: 500px;
+  height: 410px;
   object-fit: cover;
-  object-position: center 40%; /* shift crop down toward the subject */
+  object-position: center 50%; /* shift crop down toward the subject */
   display: block;
 }
 
@@ -183,12 +183,12 @@ nav a.active:hover {
 .section-link {
   display: flex;
   justify-content: flex-end;
-  padding: 12px 0;
+  padding: 8px 0;
 }
 
 .section-link a,
 .section-link a:visited {
-  font-family: 'Archivo', sans-serif;
+  font-family: 'Anonymous Pro', monospace;
   font-weight: 600;
   font-size: 1rem;
   color: #111;
