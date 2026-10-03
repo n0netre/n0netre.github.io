@@ -9,7 +9,7 @@ html {
 }
 
 body {
-  font-family: 'Archivo Black', sans-serif;
+  font-family: 'Anonymous Pro', monospace; 
   color: #111;
   line-height: 1.6;
   min-height: 100vh;
@@ -66,7 +66,7 @@ nav ul li {
 }
 
 nav a {
-  font-family: 'Archivo', sans-serif;
+  font-family: 'Anonymous Pro', monospace; 
   font-weight: 500;
   text-decoration: none;
   color: #111;
@@ -512,7 +512,7 @@ footer {
 
 .footer-content {
   padding: 20px;
-  font-family: 'Archivo Black', sans-serif;
+  font-family: 'Anonymous Pro', monospace; 
   font-size: 0.8rem;
 }
 
