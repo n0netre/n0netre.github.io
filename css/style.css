@@ -106,7 +106,7 @@ nav a.active:hover {
 }
 
 .bio p {
-  font-family: 'Archivo Black', sans-serif;
+  font-family: 'Anonymous Pro', monospace;
   font-size: 1.05rem;
    line-height: 1.4;
 }
@@ -154,7 +154,7 @@ nav a.active:hover {
   left: 5%;
   width: 90%;
   transform: translateY(-50%);
-  font-family: 'Archivo Black', Arial, sans-serif;
+  font-family: 'Anonymous Pro', monospace;
   font-size: 2rem;
   color: #fff;
   text-align: center;
