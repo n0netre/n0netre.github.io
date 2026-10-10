@@ -281,7 +281,7 @@ nav a.active:hover {
 
 .commission-item:hover h3,
 .commission-item.is-active h3 {
-  color: red;
+  color: #d10000;
 }
 
 /* ---- Right column: carousel ---- */
