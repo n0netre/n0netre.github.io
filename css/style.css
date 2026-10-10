@@ -520,12 +520,20 @@ nav a.active:hover {
   margin-bottom: 20px;
 }
 
+.contact-title {
+  font-family: 'Michroma', sans-serif;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 1;
+  margin: 40px 0 16px 0;
+}
+
 .about-image {
   flex: 1;
 }
 
 .about-image img {
-  width: 100%;
+  width: 800%;
   height: auto;
   display: block;
 }
