@@ -189,7 +189,7 @@ nav a.active:hover {
 .section-link a,
 .section-link a:visited {
   font-family: 'Anonymous Pro', monospace;
-  font-weight: 600;
+  font-weight: 400;
   font-size: 1rem;
   color: #111;
   text-decoration: none;
@@ -372,14 +372,14 @@ nav a.active:hover {
 }
 
 .film-info h2 {
-  font-family: 'Archivo Black', Arial, sans-serif;
-  font-weight: 400;
+  font-family: 'Anonymous Pro', monospace;;
+  font-weight: 700;
   font-size: 1.1rem;
   margin: 0 0 4px 0;
 }
 
 .film-info .film-type {
-  font-family: 'Archivo', Arial, sans-serif;
+  font-family: 'Anonymous Pro', monospace;;
   font-weight: 400;
   font-style: italic;
   font-size: 0.95rem;
@@ -387,7 +387,7 @@ nav a.active:hover {
 }
 
 .film-info .film-description {
-  font-family: 'Archivo', Arial, sans-serif;
+  font-family: 'Anonymous Pro', monospace;;
   font-weight: 400;
   font-style: normal;
   font-size: 0.95rem;
