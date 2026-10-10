@@ -38,7 +38,7 @@
       <!-- ---- Left column: list of names ---- -->
       <div class="commissions-list">
 
-        <button class="commission-item" data-gallery="dana-chow">
+        <button class="commission-item is-active" data-gallery="dana-chow">
           <h3>Dana Chow</h3>
           <p>Fashion design NÜ GUI</p>
         </button>
@@ -133,7 +133,7 @@
     const prevBtn = document.querySelector(".carousel-arrow.prev");
     const nextBtn = document.querySelector(".carousel-arrow.next");
 
-    let currentGallery = null;
+    let currentGallery = "dana-chow";
     let currentIndex = 0;
 
     function showImage() {
@@ -173,7 +173,9 @@
       showImage();
     });
 
-    // Carousel stays hidden until a name is clicked
+// Show the first gallery (Dana Chow) on page load
+carousel.classList.add("is-visible");
+showImage();
   </script>
 
 </body>
