@@ -279,8 +279,9 @@ nav a.active:hover {
   font-style: italic;
 }
 
+.commission-item:hover h3,
 .commission-item.is-active h3 {
-  text-decoration: underline;
+  color: red;
 }
 
 /* ---- Right column: carousel ---- */
