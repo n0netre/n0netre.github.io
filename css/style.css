@@ -501,6 +501,46 @@ nav a.active:hover {
   }
 }
 
+/* ---- À propos page ---- */
+.about-layout {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  padding-top: 40px;
+  padding-bottom: 60px;
+}
+
+.about-text {
+  flex: 0 0 45%;
+}
+
+.about-text p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.about-image {
+  flex: 1;
+}
+
+.about-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 900px) {
+  .about-layout {
+    flex-direction: column;
+  }
+
+  .about-text,
+  .about-image {
+    flex: 1 1 100%;
+  }
+}
+
 /* ---- Footer ---- */
 footer {
   margin-top: auto;
