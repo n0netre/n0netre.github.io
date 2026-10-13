@@ -203,7 +203,7 @@ nav a.active:hover {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  margin-bottom: 12px;
+  margin-bottom: 5px;
 }
 
 .section-header .section-title-row h1 {
