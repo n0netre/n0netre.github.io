@@ -199,6 +199,21 @@ nav a.active:hover {
   text-decoration: underline;
 }
 
+.section-title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 12px;
+}
+
+.section-header .section-title-row h1 {
+  margin-bottom: 0;
+}
+
+.section-title-row .section-link {
+  padding: 0;
+}
+
 /* ---- Gallery ----
    Each image keeps its own natural width/height ratio.
    Row height is fixed; width is automatic based on that ratio,
